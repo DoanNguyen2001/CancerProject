@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Ask for Visualization</title>
+    <style>
+        body {
+            font-family: sans-serif;
+        }
+        .frequent-questions {
+            margin-top: 20px;
+            border: 1px solid #ccc;
+            padding: 15px;
+            border-radius: 5px;
+            background-color: #f9f9f9;
+        }
+        .frequent-questions h2 {
+            margin-top: 0;
+            color: #333;
+        }
+        .question-link {
+            display: block;
+            margin-bottom: 8px;
+            color: #007bff;
+            text-decoration: none;
+            cursor: pointer;
+        }
+        .question-link:hover {
+            text-decoration: underline;
+        }
+        
+    </style>
+</head>
+<body>
+    <h1>Ask a question about the data:</h1>
+    <form method="POST" action="/ask">
+        <input type="text" name="question" size="80" placeholder="Enter your question here">
+        <input type="submit" value="Ask">
+    </form>
+
+    <div class="frequent-questions">
+        <h2>Frequent Questions:</h2>
+        <p>Try asking one of these common questions:</p>
+        <ul>
+            <li><a href="#" class="question-link" onclick="document.querySelector('input[name=\'question\']').value='treatment transaction'; document.querySelector('form').submit();">Show treatment transaction</a></li>
+            <li><a href="#" class="question-link" onclick="document.querySelector('input[name=\'question\']').value='age distribution'; document.querySelector('form').submit();">Display age distribution</a></li>
+            <li><a href="#" class="question-link" onclick="document.querySelector('input[name=\'question\']').value='top 10 common treatment'; document.querySelector('form').submit();">What are the top 10 common treatment regimens?</a></li>
+            <li><a href="#" class="question-link" onclick="document.querySelector('input[name=\'question\']').value='survival curves by age'; document.querySelector('form').submit();">Show survival curves by age group</a></li>
+            <li><a href="#" class="question-link" onclick="document.querySelector('input[name=\'question\']').value='colorectal cancer'; document.querySelector('form').submit();">Display information about colorectal cancer</a></li>
+            <li><a href="#" class="question-link" onclick="document.querySelector('input[name=\'question\']').value='dose distribution'; document.querySelector('form').submit();">Show the dose distribution</a></li>
+            <li><a href="#" class="question-link" onclick="document.querySelector('input[name=\'question\']').value='lymphoma regimens'; document.querySelector('form').submit();">What are the Lymphoma regimens?</a></li>
+            <li><a href="#" class="question-link" onclick="document.querySelector('input[name=\'question\']').value='top treatment success rate'; document.querySelector('form').submit();">Show the top treatment success rate</a></li>
+            </ul>
+    </div>
+</body>
+</html>

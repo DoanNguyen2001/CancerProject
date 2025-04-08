@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Visualization Result</title>
+    <style>
+        .smaller-image {
+            max-width: 1000px; /* Adjust this value as needed */
+            height: auto;
+        }
+    </style>
+</head>
+<body>
+    {% if image_path %}
+        <h2>Generated Visualization:</h2>
+        <img src="{{ image_path }}" alt="Generated Image" class="smaller-image">
+    {% elif message %}
+        <p>{{ message }}</p>
+    {% endif %}
+    <p><a href="/">Ask another question</a></p>
+</body>
+</html>
